@@ -41,7 +41,7 @@
       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <% recipes.forEach(recipe => { %>
         <li class="bg-white rounded-lg shadow-md p-4">
-          <h2 class="text-4xl font-semibold text-blue-400"><%= recipe.name %></h2>
+         <a href="/recipe/<%= recipe._id %>"> <h2 class="text-4xl font-semibold text-blue-400"><%= recipe.name %></h2></a> 
           <p class="text-gray-700">
             <strong>Category:</strong> <%= recipe.category %>
           </p>

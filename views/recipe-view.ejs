@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/styles/output.css" />
+    <link type="image/png" sizes="16x16" rel="icon" href="../public/images/icons8-international-food-48.png">
+</head>
+<body>
+    <header>
+        <nav class="bg-white shadow-lg">
+          <div
+            class="max-w-screen-xl mx-auto p-4 flex items-center justify-between"
+          >
+            <a href="/" class="flex items-center">
+              <span class="text-2xl font-bold text-blue-600"
+                >Food<span class="text-blue-400">Lovers</span></span
+              >
+            </a>
+            <div class="flex space-x-8 items-center">
+              <a
+                href="/add"
+                class="py-3 px-6 bg-blue-600 text-white font-semibold text-lg rounded-md hover:bg-blue-700 transition duration-300"
+                >Add Recipe</a
+              >
+              <a
+                href="/"
+                class="py-3 px-6 bg-blue-600 text-white font-semibold text-lg rounded-md hover:bg-blue-700 transition duration-300"
+                >Home</a
+              >
+            </div>
+          </div>
+        </nav>
+      </header>
+      <ul>
+        <li>
+            <%= recipe.name %>
+        </li> 
+        <li>
+            <%= recipe.description %>
+        </li>
+        <img src="<%= recipe.image %>" alt="">
+      </ul>
+</body>
+</html>
