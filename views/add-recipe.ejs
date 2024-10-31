@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Recipe</title>
+    <link rel="stylesheet" href="../public/styles/output.css">
+    <link type="image/png" sizes="16x16" rel="icon" href="../public/images/icons8-international-food-48.png">
+</head>
+<body class="bg-blue-600">
+    <header>
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
+                <a href="/" class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-600">Food<span class="text-blue-400">Lovers</span></span>
+                </a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/" class="py-3 px-6 bg-blue-600 text-white font-semibold text-lg rounded-md hover:bg-blue-700 transition duration-300">Home</a>
+                    <a href="/list" class="py-3 px-6 bg-blue-600 text-white font-semibold text-lg rounded-md hover:bg-blue-700 transition duration-300">Recipe List</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="max-w-screen-xl mx-auto p-6 md:flex items-center bg-white rounded-lg shadow-lg mt-4">
+        <div class="md:w-1/2 mb-6 md:mb-0 p-6">
+            <h1 class="text-4xl font-bold text-blue-600 mb-4">Add a New Recipe</h1>
+            <form action="/add" method="post" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-gray-700">Recipe Name:</label>
+                    <input type="text" id="name"name="name"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2 " />
+                </div>
+                <div>
+                    <label for="category" class="block text-gray-700">Category:</label>
+                    <input type="text" id="category" name="category"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2" />
+                </div>
+                <div>
+                    <label for="image" class="block text-gray-700">Image Link:</label>
+                    <input type="url" id="image" name="image"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2" />
+                </div>
+                <div>
+                    <label for="grade" class="block text-gray-700">Grade (1 to 5):</label>
+                    <input type="number" id="grade" name="grade" min="1" max="5"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm p-2" />
+                </div>
+                <div>
+                    <label for="description" class="block text-gray-700">Description:</label>
+                    <textarea id="description" name="description"  class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-blue-500 p-2"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="inline-block px-6 py-3 bg-blue-600 text-xl text-white rounded-md hover:bg-blue-700 w-full">Add Recipe</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="md:w-1/2 p-6">
+            <img src="../public/images/formPic.pnj.png" alt="Delicious Food" class="rounded-lg" />
+        </div>
+    </div>
+</body>
+</html>
